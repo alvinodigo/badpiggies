@@ -1,0 +1,454 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	text-decoration: none;
+}
+
+body {
+	background-color: #f8a215;
+	transform: scale(0.8);
+}
+
+/*
+- CABEÇA
+*/
+
+#cabeca {
+	width: 692px;
+	height: 592px;
+	position: absolute;
+	top: 120px;
+	left: 50%;
+	border-radius: 323px;
+	box-shadow: 11px 50px #6de249 inset, -21px 51px #6de249 inset, -13px 0px #6de249 inset, 13px 0px #6de249 inset;
+	border-top: 18px solid #000;
+	border-left: 21px solid #000;
+	border-right: 22px solid #000;
+	border-bottom: 24px solid #000;
+	z-index: 4;
+	background-color: #51bc30;
+	transform: translate(-50%,0);
+}
+
+/*
+- ORELHAS
+*/
+
+.orelha {
+	position: absolute;
+	border-radius: 75px;
+	border-top: 15px solid #000;
+	border-left: 18px solid #000;
+	border-right: 12px solid #000;
+	border-bottom: none;
+	background-color: #6de249;
+}
+#orelha-esquerda {
+	width: 107px;
+	height: 113px;
+	top: -90px;
+	left: 100px;
+	transform:rotate(-31deg);
+}
+#orelha-direita {
+	width: 106px;
+	height: 124px;
+	top: -120px;
+	right: 210px;
+	transform:rotate(21deg);
+}
+
+/*
+ Solução para esconder as rebarbas das orelhas
+*/
+
+#orelha-esquerda:before,
+#orelha-esquerda:after,
+#orelha-direita:before,
+#orelha-direita:after {
+	content: "";
+	position: absolute;
+	background-color: #6de249;
+}
+#orelha-esquerda:before {
+	width: 56px;
+	height: 47px;
+	top: 107px;
+	left: 42px;
+	border-radius: 75px;
+}
+#orelha-esquerda:after {
+	width: 64px;
+	height: 50px;
+	top: 95px;
+	left: -20px;
+	border-radius: 26px;
+}
+#orelha-direita:before {
+	width: 87px;
+	height: 48px;
+	top: 109px;
+	left: 13px;
+	border-radius: 75px;
+	transform:rotate(-14deg);
+}
+#orelha-direita:after {
+	width: 51px;
+	height: 50px;
+	top: 92px;
+	right: -26px;
+	border-radius: 26px;
+}
+
+/*
+ Ouvidos
+*/
+
+.ouvido {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	background-color: #389e1b;
+}
+#orelha-esquerda .ouvido {
+	width: 60px;
+	height: 61px;
+	top: 38px;
+	left: 23px;
+}
+#orelha-direita .ouvido {
+	width: 56px;
+	height: 61px;
+	top: 34px;
+	left: 26px;
+}
+
+/*
+- SOBRANCELHAS
+*/
+
+.sobrancelha {
+	width: 75px;
+	height: 24px;
+	position: absolute;
+	background-color: #255d0e;
+}
+#sobrancelha-esquerda {
+	top: 130px;
+	left: 44px;
+	border-radius: 28px 109% 137% 33px;
+}
+#sobrancelha-direita {
+	top: 115px;
+	right: 62px;
+	border-radius: 33px 137% 109% 28px;
+}
+
+/*
+- OLHOS
+*/
+
+.olho {
+	width: 150px;
+	height: 161px;
+	position: absolute;
+	top: 190px;
+	border-top: 18px solid #44741a;
+	border-left: 10px solid #44741a;
+	border-right: 10px solid #44741a;
+	border-bottom: 11px solid #44741a;
+	border-radius: 50%;
+	background-color: #fff;
+	animation: piscar 6s infinite step-start 0s;
+}
+#olho-esquerdo { left: 15px; }
+#olho-direito { right: 15px; }
+
+/*
+ Olheiras
+*/
+
+#olho-esquerdo:after,
+#olho-direito:after {
+	width: 170px;
+	height: 190px;
+	content: "";
+	position: absolute;
+	top: -4px;
+	border-radius: 50%;
+	z-index: -1;
+	background-color: #46b327;
+}
+#olho-esquerdo:after { left: 5px; }
+#olho-direito:after { left: -9px; }
+
+/*
+ Pupilas
+*/
+
+.pupila {
+	width: 36px;
+	height: 38px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: #000;
+	animation: esconder 6s infinite step-start 0s;
+}
+#olho-esquerdo .pupila {
+	top: 65px;
+	left: 95px;
+}
+#olho-direito .pupila {
+	top: 59px;
+	left: 30px;
+}
+
+/*
+- NARIZ
+*/
+
+#nariz {
+	width: 315px;
+	height: 261px;
+	position: absolute;
+	top: 167px;
+	left: 147px;
+	border-top: 13px solid #4e8e00;
+	border-left: 17px solid #4e8e00;
+	border-right: 18px solid #4e8e00;
+	border-bottom: 12px solid #4e8e00;
+	border-radius: 50%;
+	z-index: 6;
+	background-color: #a5e900;
+}
+
+/*
+ Narinas
+*/
+
+.narina {
+	position: absolute;
+	border-radius: 50%;
+	background-color: #14390f;
+}
+#narina-esquerda {
+	width: 67px;
+	height: 98px;
+	top: 86px;
+	left: 59px;
+}
+#narina-direita {
+	width: 71px;
+	height: 84px;
+	top: 95px;
+	right: 64px;
+}
+
+/*
+- BOCA
+*/
+
+#boca {
+	width: 352px;
+	height: 72px;
+	position: absolute;
+	top: 403px;
+	left: 159px;
+	border-radius: 0 0 128px 118px;
+	z-index: 2;
+	background-color: #14390f;
+	transform:rotate(-3deg);
+}
+
+/*
+ Dentes
+*/
+
+.dente {
+	width: 65px;
+	height: 72px;
+	position: absolute;
+	border-top: 8px solid #44741a;
+	border-radius: 36px;
+	z-index: 4;
+	background-color: #fff;
+}
+#dente-1 {
+	top: -9px;
+	left: 56px;
+	border-left: 6px solid #44741a;
+	border-right: 3px solid #44741a;
+	border-bottom: 13px solid #44741a;
+	transform:rotate(25deg);
+}
+#dente-2 {
+	top: 10px;
+	left: 132px;
+	border-left: 4px solid #44741a;
+	border-right: 6px solid #44741a;
+	border-bottom: 15px solid #44741a;
+	transform:rotate(-6deg);
+}
+#dente-3 {
+	top: -3px;
+	left: 209px;
+	border-left: 5px solid #44741a;
+	border-right: 8px solid #44741a;
+	border-bottom: 15px solid #44741a;
+	transform:rotate(-26deg);
+}
+
+/*
+- SARDAS
+*/
+
+.sarda {
+	width: 28px;
+	height: 21px;
+	position: absolute;
+	border-radius: 11px;
+	background-color: #4e8e00;
+	transform:rotate(-21deg);
+}
+#sarda-1 {
+	top: 390px;
+	left: 82px;
+}
+#sarda-2 {
+	top: 383px;
+	left: 129px;
+}
+#sarda-3 {
+	top: 416px;
+	left: 116px;
+}
+#sarda-4 {
+	top: 416px;
+	right: 140px;
+}
+#sarda-5 {
+	top: 390px;
+	right: 120px;
+}
+#sarda-6 {
+	top: 416px;
+	right: 87px;
+}
+
+/*
+- SOMBRA
+*/
+
+#sombra {
+	width: 479px;
+	height: 60px;
+	position: absolute;
+	top: 714px;
+	left: 50%;
+	border-radius: 48%;
+	z-index: 2;
+	background-color: #c89318;
+	transform: translate(-50%,0);
+}
+
+/*
+- BOTÃO MINECRAFT
+*/
+
+#minecraft {
+	width: 242px;
+	height: 86px;
+	cursor: pointer;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	border-radius: 0;
+	box-shadow: 6px 4px #e59513;
+	background-color: #f8b74c;
+	z-index: 9;
+	transition: transform 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+#minecraft button {
+	width: 215px;
+	height: 76px;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	cursor: pointer;
+	outline: none;
+	border-radius: 0;
+	box-shadow: 6px 4px #e5a946;
+	background-color: #e7940c;
+	transform: rotate(-3deg);
+	transition: transform 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+#minecraft button span {
+	font-weight: 400;
+	font-family: arial, sans-serif;
+	font-size: 2.0em;
+	color: #fff;
+	display: block;
+}
+
+/*
+ Efeito hover
+*/
+
+#minecraft:hover { transform:rotate(-3deg); }
+#minecraft:hover button { transform:rotate(6deg); }
+
+/*
+- VERSÃO MINECRAFT
+*/
+
+
+/*
+ Tudo quadrado, menos o botão
+*/
+body.minecraft * { border-radius: 0 !important; }
+body.minecraft #minecraft,
+body.minecraft #minecraft button { border-radius: 50px !important; }
+
+/*
+ Desgirar as orelhas
+*/
+
+body.minecraft #orelha-esquerda,
+body.minecraft #orelha-direita { transform:rotate(0deg) !important; }
+
+/*
+ Reposicionar as orelhas
+*/
+
+body.minecraft #orelha-esquerda { top: -127px; }
+body.minecraft #orelha-direita { top: -138px; }
+
+/*
+ Esconder os gatos das rebarbas das orelhas
+*/
+
+body.minecraft #orelha-esquerda:before,
+body.minecraft #orelha-esquerda:after,
+body.minecraft #orelha-direita:before,
+body.minecraft #orelha-direita:after { display: none !important; }
+
+/*
+- ANIMAÇÃO DOS OLHOS PISCANDO
+*/
+
+@keyframes piscar {
+	0%, 100% { background-color: #44741a; }
+	15%, 95% { background-color: #fff; }
+}
+
+/*
+- ANIMAÇÃO DA PUPILA SUMINDO
+*/
+
+@keyframes esconder {
+	0%, 100% { opacity: 0; }
+	15%, 95% { opacity: 1; }
+}
