@@ -10,6 +10,6 @@ function ativarClique() {
 		document.body.classList.toggle('minecraft');
 
 		var buttonText = this.querySelector('span');
-		buttonText.textContent = buttonText.textContent == 'Versão Minecraft' ? 'Versão Normal' : 'Versão Minecraft';
+		buttonText.textContent = buttonText.textContent == 'Minecraft version' ? 'Back to normal' : 'Minecraft version';
 	});
 }
